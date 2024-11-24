@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="CalculadoraTeste" project="calculadora_project" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="calculadora_classes.CalculadoraTeste" time="0.0" displayname="CalculadoraTeste" uniqueid="[engine:junit-jupiter]/[class:calculadora_classes.CalculadoraTeste]">
-    <testcase name="testSomar" classname="calculadora_classes.CalculadoraTeste" time="0.0" displayname="testSomar()" uniqueid="[engine:junit-jupiter]/[class:calculadora_classes.CalculadoraTeste]/[method:testSomar()]"/>
-  </testsuite>
-</testrun>

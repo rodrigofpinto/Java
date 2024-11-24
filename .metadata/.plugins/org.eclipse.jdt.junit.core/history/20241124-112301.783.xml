@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="CalculadoraTeste" project="calculadora_project" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="calculadora_classes.CalculadoraTeste" time="0.025" displayname="CalculadoraTeste" uniqueid="[engine:junit-jupiter]/[class:calculadora_classes.CalculadoraTeste]">
-    <testcase name="testSubtrair" classname="calculadora_classes.CalculadoraTeste" time="0.023" displayname="testSubtrair()" uniqueid="[engine:junit-jupiter]/[class:calculadora_classes.CalculadoraTeste]/[method:testSubtrair()]"/>
-    <testcase name="testSomar" classname="calculadora_classes.CalculadoraTeste" time="0.001" displayname="testSomar()" uniqueid="[engine:junit-jupiter]/[class:calculadora_classes.CalculadoraTeste]/[method:testSomar()]"/>
-  </testsuite>
-</testrun>
