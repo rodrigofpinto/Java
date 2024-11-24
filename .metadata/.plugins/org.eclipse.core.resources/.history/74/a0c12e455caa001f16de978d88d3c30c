@@ -1,0 +1,47 @@
+package gestaoescolar;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Criar objetos Aluno com nome e matrícula
+        Aluno aluno1 = new Aluno("Rodrigo Pinto", "12345");
+        Aluno aluno2 = new Aluno("Maria Isabel", "54321");
+        
+        // Armazenar os alunos em um array
+        Aluno[] arrayAlunos = {aluno1, aluno2};
+        
+        // Chama o método para escolher um aluno
+        escolherAluno(arrayAlunos);
+    }
+
+    // Método para escolher o aluno
+    public static void escolherAluno(Aluno[] arrayAlunos) {
+        Scanner meuObj = new Scanner(System.in);
+        int alunoConfirm = -1;
+
+        // Loop para garantir que o número do aluno seja válido
+        while (true) {  // Loop infinito, só vai parar quando a entrada for válida
+            try {
+                System.out.println("Qual aluno deseja verificar? (Digite um número entre 1 e " + arrayAlunos.length + ")");
+                alunoConfirm = meuObj.nextInt();  // Recebe a entrada do usuário
+
+                // Verifica se o índice está dentro do intervalo válido
+                if (alunoConfirm >= 1 && alunoConfirm <= arrayAlunos.length) {
+                    // Quando a entrada for válida, exibe as informações do aluno
+                    arrayAlunos[alunoConfirm - 1].exibirInformacoes();
+                    break;  // Encerra o loop se o número for válido
+                } else {
+                    // Caso o índice esteja fora do intervalo válido
+                    System.out.println("Erro: Número de aluno inválido! Tente novamente.");
+                }
+            } catch (java.util.InputMismatchException e) {
+                // Captura exceção se o usuário não digitar um número inteiro
+                System.out.println("Erro: Entrada inválida! Por favor, digite um número.");
+                meuObj.next();  // Limpa o buffer do scanner
+            }
+        }
+
+        meuObj.close();  // Fechar o Scanner
+    }
+}

@@ -1,0 +1,42 @@
+package gestaoescolar;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Criar objetos Aluno com nome e matrícula
+        Aluno aluno1 = new Aluno("Rodrigo Pinto", "12345");
+        Aluno aluno2 = new Aluno("Maria Isabel", "54321");
+        
+        // Armazenar os alunos em um array
+        Aluno[] arrayAlunos = {aluno1, aluno2};
+
+        // Exibir menu para o usuário
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Escolha uma opção:");
+        System.out.println("1 - Buscar aluno por número de matrícula");
+        System.out.println("2 - Buscar aluno pelo índice no array");
+        
+        // Receber a escolha do usuário
+        int opcao = scanner.nextInt();
+        
+        // Realizar ação dependendo da opção escolhida
+        switch (opcao) {
+            case 1:
+                System.out.print("Digite o número da matrícula do aluno: ");
+                scanner.nextLine();  // Limpar o buffer
+                String numeroMatricula = scanner.nextLine();  // Recebe o número de matrícula
+                Aluno.buscarPorNumero(arrayAlunos, numeroMatricula);  // Buscar aluno pelo número
+                break;
+            case 2:
+                System.out.print("Digite o número do índice do aluno (1 para o primeiro aluno): ");
+                int indice = scanner.nextInt() - 1;  // Subtrai 1 porque o índice do array começa do 0
+                Aluno.escolherPorIndice(arrayAlunos, indice);  // Buscar aluno pelo índice
+                break;
+            default:
+                System.out.println("Opção inválida! Tente novamente.");
+        }
+        
+        scanner.close();  // Fechar o scanner
+    }
+}

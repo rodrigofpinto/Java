@@ -1,0 +1,10 @@
+package nov10classes;
+
+public class RegistoPontos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

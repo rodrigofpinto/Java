@@ -1,0 +1,16 @@
+package nov04classes;
+
+public class Principal1 {
+
+	public static void main(String[] args) {
+		Animal meuAnimal = new Animal();
+		Animal meuPorco = new Porco();
+		Animal meuCao = new Cao(); 
+		
+		meuAnimal.somAnimal(); //Chama o método somAnimal para o objeto Animal
+		meuPorco.somAnimal(); //Chama o método somAnimal para o objeto Porco
+		meuCao.somAnimal(); //Chama o método somAnimal para o objeto Cão
+
+	}
+
+}

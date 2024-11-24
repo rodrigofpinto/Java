@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CalculadoraTeste" project="calculadora_project" tests="3" started="3" failures="0" errors="1" ignored="0">
+  <testsuite name="calculadora_classes.CalculadoraTeste" time="0.038" displayname="CalculadoraTeste" uniqueid="[engine:junit-jupiter]/[class:calculadora_classes.CalculadoraTeste]">
+    <testcase name="testSubtrair" classname="calculadora_classes.CalculadoraTeste" time="0.026" displayname="testSubtrair()" uniqueid="[engine:junit-jupiter]/[class:calculadora_classes.CalculadoraTeste]/[method:testSubtrair()]"/>
+    <testcase name="testSomar" classname="calculadora_classes.CalculadoraTeste" time="0.002" displayname="testSomar()" uniqueid="[engine:junit-jupiter]/[class:calculadora_classes.CalculadoraTeste]/[method:testSomar()]"/>
+    <testcase name="testeDividir" classname="calculadora_classes.CalculadoraTeste" time="0.008" displayname="testeDividir()" uniqueid="[engine:junit-jupiter]/[class:calculadora_classes.CalculadoraTeste]/[method:testeDividir()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	This method must return a result of type double
+&#13;
+	at calculadora_classes.Calculadora.dividir(Main.java:28)&#13;
+	at calculadora_classes.CalculadoraTeste.testeDividir(CalculadoraTeste.java:24)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

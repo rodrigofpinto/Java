@@ -1,0 +1,16 @@
+package calculadora_classes;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CalculadoraTeste {
+
+	@Test
+	void testSomar() {
+        Calculadora calculadora = new Calculadora();
+        int resultado = calculadora.somar(5, 3);
+        assertEquals(8, resultado); // Verifica se 5 + 3 = 8
+    }
+
+}
