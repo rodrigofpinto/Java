@@ -2,6 +2,7 @@ package crc_testejunit;
 
 public class Main {
     public static void main(String[] args) {
+    	//TESTE JAVA
         // Criando um cliente
         Cliente cliente = new Cliente("João Silva", "joao.silva@email.com");
 
