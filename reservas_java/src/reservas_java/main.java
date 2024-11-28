@@ -2,7 +2,7 @@ package reservas_java;
 
 import java.util.Scanner;
 
-public class main {
+public class Main {
 
     public static void main(String[] args) {
         reservas reserva1 = new reservas("Rodrigo Pinto", "pintinhoamarelinho@gmail.com", "969696969", 1, "20:00", "16/11/2024", "4", "16/10/2024");

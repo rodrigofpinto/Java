@@ -7,7 +7,7 @@ public class Principal2 {
 	public static void main(String[] args) {
 		Principal2 meuObj = new Principal2();
 		meuObj.x = 50;
-		meuObj.PI = 25; // vai dar erro, é final
+		//meuObj.PI = 25; // vai dar erro, é final
 		System.out.println(meuObj.x);
 		System.out.println(meuObj.PI);
 	}

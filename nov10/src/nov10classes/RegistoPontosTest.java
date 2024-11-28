@@ -1,74 +1,94 @@
 package nov10classes;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*; // Importa métodos estáticos como assertEquals para facilitar os testes.
+import org.junit.jupiter.api.BeforeEach; // Anotação para executar métodos antes de cada teste.
+import org.junit.jupiter.api.Test; // Anotação para marcar métodos de teste.
 
-import org.junit.jupiter.api.Test;
-
-//Com o método assertEquals se os valores não forem iguais, o teste falhará e será lançada uma mensagem de erro.
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-//Classe de teste para RegistoPontos
+/**
+ * Classe de teste para a classe RegistoPontos.
+ * Essa classe verifica se os métodos de RegistoPontos estão atribuindo
+ * os pontos corretamente a usuários normais e VIPs.
+ */
 public class RegistoPontosTest {
 
-private RegistoPontos registoPontos;
-private Utilizador utilizador;
-private CalculadoraBonus calculadoraBonus;
+    // Declaração de variáveis que serão usadas nos testes.
+    private RegistoPontos registoPontos;
+    private Utilizador utilizador;
+    private CalculadoraBonus calculadoraBonus;
 
-@BeforeEach
-public void setup() {
-  // Inicializa os objetos antes de cada teste
-  calculadoraBonus = new CalculadoraBonus();
-  registoPontos = new RegistoPontos(calculadoraBonus);
-  utilizador = new Utilizador();
-  utilizador.setNome("João");
-  utilizador.setPontos(0);
-  utilizador.setVip(false);
-}
+    /**
+     * Método setup inicializa os objetos necessários para os testes antes de cada execução.
+     */
+    @BeforeEach
+    public void setup() {
+        calculadoraBonus = new CalculadoraBonus(); // Cria uma instância de CalculadoraBonus.
+        registoPontos = new RegistoPontos(calculadoraBonus); // Cria uma instância de RegistoPontos.
+        utilizador = new Utilizador(); // Cria uma instância de Utilizador.
+        utilizador.setNome("João"); // Configura o nome do utilizador.
+        utilizador.setPontos(0); // Inicializa os pontos como 0.
+        utilizador.setVip(false); // Define o utilizador como não VIP.
+    }
 
-@Test
-public void testFazerComentarioUtilizadorNormal() {
-  // Testa se fazer um comentário atribui corretamente os pontos a um utilizador não VIP
-  registoPontos.fazerComentario(utilizador);
-  assertEquals(3, utilizador.getPontos(), "O utilizador normal deveria ter 3 pontos após fazer um comentário.");
-}
+    /**
+     * Testa se fazer um comentário atribui 3 pontos para um utilizador normal.
+     */
+    @Test
+    public void testFazerComentarioUtilizadorNormal() {
+        registoPontos.fazerComentario(utilizador); // Faz o utilizador comentar.
+        assertEquals(3, utilizador.getPontos(), 
+            "O utilizador normal deveria ter 3 pontos após fazer um comentário.");
+    }
 
-@Test
-public void testCriarTopicoUtilizadorNormal() {
-  // Testa se criar um tópico atribui corretamente os pontos a um utilizador não VIP
-  registoPontos.criarTopico(utilizador);
-  assertEquals(5, utilizador.getPontos(), "O utilizador normal deveria ter 5 pontos após criar um tópico.");
-}
+    /**
+     * Testa se criar um tópico atribui 5 pontos para um utilizador normal.
+     */
+    @Test
+    public void testCriarTopicoUtilizadorNormal() {
+        registoPontos.criarTopico(utilizador); // Faz o utilizador criar um tópico.
+        assertEquals(5, utilizador.getPontos(), 
+            "O utilizador normal deveria ter 5 pontos após criar um tópico.");
+    }
 
-@Test
-public void testDarLikeUtilizadorNormal() {
-  // Testa se dar um "like" atribui corretamente os pontos a um utilizador não VIP
-  registoPontos.darLike(utilizador);
-  assertEquals(1, utilizador.getPontos(), "O utilizador normal deveria ter 1 ponto após dar um 'like'.");
-}
+    /**
+     * Testa se dar um "like" atribui 1 ponto para um utilizador normal.
+     */
+    @Test
+    public void testDarLikeUtilizadorNormal() {
+        registoPontos.darLike(utilizador); // Faz o utilizador dar um "like".
+        assertEquals(1, utilizador.getPontos(), 
+            "O utilizador normal deveria ter 1 ponto após dar um 'like'.");
+    }
 
-@Test
-public void testFazerComentarioUtilizadorVip() {
-  // Testa se fazer um comentário atribui corretamente os pontos a um utilizador VIP
-  utilizador.setVip(true);
-  registoPontos.fazerComentario(utilizador);
-  assertEquals(15, utilizador.getPontos(), "O utilizador VIP deveria ter 15 pontos após fazer um comentário.");
-}
+    /**
+     * Testa se fazer um comentário atribui 15 pontos para um utilizador VIP.
+     */
+    @Test
+    public void testFazerComentarioUtilizadorVip() {
+        utilizador.setVip(true); // Define o utilizador como VIP.
+        registoPontos.fazerComentario(utilizador); // Faz o utilizador comentar.
+        assertEquals(15, utilizador.getPontos(), 
+            "O utilizador VIP deveria ter 15 pontos após fazer um comentário.");
+    }
 
-@Test
-public void testCriarTopicoUtilizadorVip() {
-  // Testa se criar um tópico atribui corretamente os pontos a um utilizador VIP
-  utilizador.setVip(true);
-  registoPontos.criarTopico(utilizador);
-  assertEquals(25, utilizador.getPontos(), "O utilizador VIP deveria ter 25 pontos após criar um tópico.");
-}
+    /**
+     * Testa se criar um tópico atribui 25 pontos para um utilizador VIP.
+     */
+    @Test
+    public void testCriarTopicoUtilizadorVip() {
+        utilizador.setVip(true); // Define o utilizador como VIP.
+        registoPontos.criarTopico(utilizador); // Faz o utilizador criar um tópico.
+        assertEquals(25, utilizador.getPontos(), 
+            "O utilizador VIP deveria ter 25 pontos após criar um tópico.");
+    }
 
-@Test
-public void testDarLikeUtilizadorVip() {
-  // Testa se dar um "like" atribui corretamente os pontos a um utilizador VIP
-  utilizador.setVip(true);
-  registoPontos.darLike(utilizador);
-  assertEquals(5, utilizador.getPontos(), "O utilizador VIP deveria ter 5 pontos após dar um 'like'.");
-}
+    /**
+     * Testa se dar um "like" atribui 5 pontos para um utilizador VIP.
+     */
+    @Test
+    public void testDarLikeUtilizadorVip() {
+        utilizador.setVip(true); // Define o utilizador como VIP.
+        registoPontos.darLike(utilizador); // Faz o utilizador dar um "like".
+        assertEquals(5, utilizador.getPontos(), 
+            "O utilizador VIP deveria ter 5 pontos após dar um 'like'.");
+    }
 }

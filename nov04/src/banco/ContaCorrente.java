@@ -19,7 +19,7 @@ public class ContaCorrente {
 	
 	// Método para obter o número da conta
 	public String getNumeroConta() {
-		return numeroConta;
+		return numeroConta;	
 	}
 	
 	// Método para obter o slado atual
