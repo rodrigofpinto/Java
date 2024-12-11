@@ -8,7 +8,9 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class JogoPongV2 extends JPanel implements ActionListener {
-    // Definições de tamanho da tela, paddles e bola
+
+	private static final long serialVersionUID = 1L;
+	// Definições de tamanho da tela, paddles e bola
     private static final int LARGURA = 800, ALTURA = 600;
     private static final int LARGURA_PADDLE = 20, ALTURA_PADDLE = 100;
     private static final int TAMANHO_BOLA = 20;

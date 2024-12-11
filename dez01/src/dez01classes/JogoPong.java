@@ -47,7 +47,7 @@ public class JogoPong extends JPanel implements ActionListener {
                     jogador1DY = 5; // Mover para baixo
                 }
 
-                // Controle do jogador 1 com as teclas W e S
+                // Controle do jogador 1 com as setas CIMA e BAIXO
                 if (e.getKeyCode() == KeyEvent.VK_UP) {
                     jogador2DY = -5; // Mover para cima
                 } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
@@ -80,7 +80,7 @@ public class JogoPong extends JPanel implements ActionListener {
     	moverPaddles();
     	verificarColisoes();
     	
-    	//Repaint da tela para mostrar as atuaalizações
+    	//Repaint da tela para mostrar as atualizações
     	repaint();
     }
     
