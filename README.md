@@ -26,11 +26,12 @@ Cada diretório ou ficheiro contém exemplos de código, seguidos de explicaçõ
 
 ### Requisitos
 
-Certifica-te de que tens o **Java 8 ou superior** instalado na tua máquina. Caso não tenhas o Java instalado, podes descarregar e instalar o [JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
+Certifica-te de que tens o **Java 8 ou superior** instalado no seu PC. Caso não tenhas o Java instalado, podes descarregar e instalar:
+[JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
 
 ### Executar os Exemplos
 
-1. **Faz o clone do repositório** para a tua máquina:
+1. **Faz o clone do repositório** para o teu PC:
 
    ```bash
-   git clone https://github.com/seu-usuario/java-aulas.git
+   git clone https://github.com/rodrigofpinto/java.git
